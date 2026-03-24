@@ -8,28 +8,38 @@
 * Impact Factor : 9.71
 
 **Abstract:**
-Distributed congestion monitoring systems often consume excessive memory due to independent telemetry storage and duplication across nodes. This work proposes a memory efficient framework that consolidates telemetry handling and minimizes redundant buffering. By introducing shared aggregation and lightweight data collection, the approach significantly reduces runtime memory overhead. Experimental results across multiple cluster sizes demonstrate improved scalability and efficient resource utilization in distributed environments.
+Modern distributed systems suffer from increasing communication overhead as hop count grows with cluster size due to static and locality unaware routing. This work highlights hop count as a critical performance factor and analyzes how existing approaches lead to inefficient request traversal. A distance aware routing approach is proposed to minimize unnecessary intermediate hops by prioritizing closer nodes. Experimental results show controlled hop growth and significantly improved scalability and network efficiency.
 
 **Key Contributions**
-* **Memory Efficient Monitoring Framework Design:**\
-Developed a distributed monitoring architecture that minimizes memory overhead by eliminating redundant telemetry storage across nodes.
-* **Consolidated Telemetry Storage Mechanism:**\
-Introduced a shared aggregation approach where telemetry data is centrally maintained, avoiding duplication of buffers, logs, and intermediate data across machines.
-* **Reduced Runtime Memory Overhead Strategy:**\
-Designed lightweight data collection techniques that limit local buffering and reduce unnecessary memory allocation during monitoring operations.
+
+* **Distance Aware Routing Framework Design:**\
+Developed a routing approach that explicitly considers communication distance to reduce hop count and improve efficiency in distributed systems.
+
+* **Hop Count Focused Optimization Mechanism:**\
+Introduced a strategy that treats hop count as a primary metric, enabling reduction of unnecessary intermediate node traversal during request routing.
+
+* **Comparative Analysis of Routing Strategies:**\
+Conducted evaluation comparing static routing, uniform placement, and distance aware routing to quantify differences in hop count behavior.
+
 * **Scalability Evaluation Across Cluster Sizes:**\
-Conducted experiments on clusters with 3, 5, 7, 9, and 11 nodes to analyze memory consumption behavior and validate improved scalability.
+Analyzed hop count trends across clusters with 3, 5, 7, 9, and 11 nodes to study communication efficiency and scalability impact.
+
 **Relevance & Real World Impact**
-* **Reduced Memory Consumption :**\
-The proposed approach significantly lowers memory usage by avoiding duplicated telemetry storage and optimizing buffer management in distributed monitoring systems.
-* **Improved Resource Utilization :**\
-Efficient memory handling ensures that more system resources remain available for application workloads, improving overall system performance.
-* **Enhanced Scalability in Distributed Environments :**\
-Controlled memory growth with increasing cluster size enables scalable monitoring without excessive resource overhead.
-* **Stable System Performance :**\
-Lower memory pressure reduces risks of garbage collection delays and paging, ensuring consistent and reliable monitoring behavior.
+
+* **Reduced Communication Overhead :**\
+Distance aware routing significantly lowers hop count, reducing unnecessary network traversal and improving communication efficiency.
+
+* **Improved Network Efficiency :**\
+Fewer intermediate hops reduce load on network components, minimizing congestion and improving overall system performance.
+
+* **Enhanced Scalability in Distributed Systems :**\
+Controlled hop growth ensures efficient scaling as cluster size increases without excessive communication overhead.
+
+* **Stable and Predictable Routing Behavior :**\
+Limiting hop escalation leads to more consistent performance and avoids unpredictable delays caused by deep routing paths.
+
 * **Academic and Practical Contribution :**\
-Provides a structured approach for designing resource efficient monitoring systems, supporting further research and real world implementation in cloud and distributed infrastructures.
+Provides a structured framework for hop aware system design, supporting further research and real world implementation in distributed platforms.
 
 **Experimental Results (Summary)**:
 
