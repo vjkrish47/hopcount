@@ -43,13 +43,13 @@ Provides a structured framework for hop aware system design, supporting further 
 
 **Experimental Results (Summary)**:
 
-  | Nodes | local monitoring (MB) | Runtime Optimized (MB)| Improvement (%) |
-  |-------|-----------------------| ----------------------| ----------------|
-  | 3     | 920                   | 700                   | 23.91           |
-  | 5     | 1100                  | 820                   | 25.45           |
-  | 7     | 1280                  | 940                   | 26.56           |
-  | 9     | 1460                  | 1050                  | 28.08           |
-  | 11    | 1640                  | 1180                  | 28.05           |
+  | Nodes | Static routing hops | Proximity aware routing hops | Improvement (%) |
+  |-------|---------------------| -----------------------------| ----------------|
+  | 3     | 3.2                 | 1.7                          | 46.88           |
+  | 5     | 4                   | 2                            | 50.00           |
+  | 7     | 4.8                 | 2.3                          | 52.08           |
+  | 9     | 5.6                 | 2.6                          | 53.57           |
+  | 11    | 6.3                 | 2.9                          | 53.97           |
 
 **Citation** \
 Distance Aware Routing for Hop Efficient Systems. \
